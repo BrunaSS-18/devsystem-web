@@ -1,8 +1,9 @@
 import React from 'react'
+import "../Styles/Login.scss"
 
 export default function Login() {
   return (
-    <main className='container-login'>
+    <main className='container login'>
       <section className='login-card'>
         <h1>Login</h1>
         
