@@ -2,6 +2,8 @@ import React from 'react'
 import "../Styles/Login.scss"
 import { useState } from 'react'
 import axios from 'axios'
+import { toast, ToastContainer } from 'react-toastify'
+import "react-toastify/dist/ReactToastify.css"
 
 export default function Login() {
   const [email, setEmail] = useState("")
@@ -19,11 +21,13 @@ export default function Login() {
     })
 
     if (usuario) {
-      alert("Login realizado com sucesso")
+      //alert("Login realizado com sucesso")
+      toast.success("Login realizado com sucesso!")
       sessionStorage.setItem("logado", "true")
       window.location.href = "/homeLogado"
     } else {
-      alert("Usuário ou senha incorreto!")
+      //alert("Usuário ou senha incorreto!")
+      toast.error("Usuário ou senha incorreto!")
     }
   } 
 
@@ -55,7 +59,8 @@ export default function Login() {
             />
           </article>
 
-          <button type='submit'>Entrar</button>
+          <button className="button-primary" type='submit'>Entrar</button>
+          <ToastContainer/>
         </form>
 
       </section>
