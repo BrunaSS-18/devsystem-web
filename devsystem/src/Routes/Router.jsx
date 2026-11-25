@@ -30,6 +30,9 @@ export default function Router() {
                 : <Navigation to="/" />
               }
             />
+
+            {/* Redireciona rotas inexistentes para a página inicial */}
+            <Route path='*' element={<Navigate to="/" replace />} />
         </Routes>
     </BrowserRouter>
   )

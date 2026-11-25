@@ -15,4 +15,14 @@ nav {
             color: $secundary-color;
         }
     }
+
+    .btn-sair {
+        padding: 8px;
+        background-color: #dc3545;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        border: none;
+        font-size: 14px;
+    }
 }
