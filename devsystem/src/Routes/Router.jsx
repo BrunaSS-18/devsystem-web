@@ -4,6 +4,7 @@ import Login from '../Pages/Login'
 import Sobre from '../Pages/Sobre'
 import Navbar from '../Components/Navbar'
 import HomeLogado from '../Pages/HomeLogado'
+import Pessoas from '../Pages/Pessoas'
 
 export default function Router() {
 
@@ -28,6 +29,15 @@ export default function Router() {
                 logado === "true"
                 ? <HomeLogado/>
                 : <Navigation to="/" />
+              }
+            />
+
+            <Route 
+              path='/pessoas' 
+              element = {
+                sessionStorage.getItem("logado") === "true"
+                  ? <Pessoas/>
+                  : <Navigate to="/" replace/>
               }
             />
 
